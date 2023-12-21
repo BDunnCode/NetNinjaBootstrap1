@@ -2,6 +2,21 @@
 $primary: #c29938;
 $light: #fbf5e5;
 
+// import the functions & variables, functions come first
+// because variables uses it. variables is imported is
+// to access the theme colors inside of it.
+
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
 // import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 
